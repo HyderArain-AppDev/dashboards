@@ -2,4 +2,11 @@
 
 <p>Go <a href="/">back</a>.</p>
 
-<%=@response_obj%>
+  <% @sym_array.each do |symbol| %>
+    <li>
+      <a href="/forex/<%=symbol.to_s%>">
+        Convert 1 <%=symbol.to_s%> to...
+      </a>
+    </li>
+  <% end %>
+
